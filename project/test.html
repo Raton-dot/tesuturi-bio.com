@@ -1,0 +1,107 @@
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="bio.css" rel="stylesheet">
+    <link rel="shortcut icon" type="x-icon" href="pngegg (3).png">
+    <title>Test Tesuturi</title>
+    <style>
+        
+        .container {
+            border: 3px solid rgb(56, 165, 208);
+            border-radius: 10px;
+            width: 60%;
+            padding: 20px;
+            display: none;
+            margin: auto;
+            transform: translate(0,100%);
+            
+         
+        }
+
+        button {
+            margin-top: 10px;
+        }
+        hr{
+            height: 4px;
+            width: auto;
+            background-color:rgb(56, 165, 208);
+            
+        }
+        
+
+        
+    </style>
+</head>
+
+<body>
+    <nav>
+        <label class="logo">Tesuturi</label>
+        <ul>
+          <li><a class="active" href="bio.html"><b>Tesuturi</b></a></li>
+          <li><a class="active" href="animale.html"><b>Tesuturi_animale</b></a></li>
+          <li><a class="active" href="vegetale.html"><b>Tesuturi_vegetale</b></a></li>
+          <li><a class="active" href="test.html"><b>Test</b></a></li>
+        </ul>
+       </nav>
+                        <img class="img one shirt" src="adn.png" alt="" data-v-710cc220="">
+                        <img class="img three shirt" src="pngegg (4).png" alt="" data-v-710cc220="">
+                        <img class="img four shirt" src="pngegg (6).png" alt="" data-v-710cc220="">
+                        <img class="img five hat" src="pngegg (7).png" alt="" data-v-710cc220="">
+                        <img class="img six shoes" src="pngegg (9).png" alt="" data-v-710cc220="">
+                        <img class="img seven shoes" src="pngegg (4).png" alt="" data-v-710cc220="">
+                        <img class="img eight pants" src="adn.png" alt="" data-v-710cc220="">
+    <div class="container">
+         Cate tipuri de tesuturi animale sunt?<hr>
+        <input type="radio" name="question1" id="correct1">4<br>
+        <input type="radio" name="question1">7<br>
+        <input type="radio" name="question1">3<br>
+        <input type="radio" name="question1">6<br>
+        <button class="next" onclick="next(1)">Urmatoarea</button>
+    </div>
+
+    <div class="container">
+        Din ce este alcatuit tesutul nervos?<hr>
+        <input type="radio" name="question2" >Neuroni si atomi<br>
+        <input type="radio" name="question2" id="correct2">Neuroni și celule<br>
+        <input type="radio" name="question2">Nucleu si celule<br>
+        <input type="radio" name="question2">Cromozomi si heterozomi<br>
+        <button class="next" onclick="next(2)">Urmatoarea</button>
+    </div>
+
+    <div class="container">
+        După apariţia vieţii toate organismele erau compuse doar dintr-o singură?<hr>
+        <input type="radio" name="question3" >Amiba<br>
+        <input type="radio" name="question3">Artera<br>
+        <input type="radio" name="question3">Glucida<br>
+        <input type="radio" name="question3" id="correct3">Celula<br>
+        <button onclick="result()">Finalizeaza</button>
+    </div>
+    <script>
+        const scris="/3 intrebari"
+        document.getElementsByClassName('container')[0].style.display = "block";
+
+        
+        function next(id) {
+            document.getElementsByClassName('container')[id-1].style.display = "none";
+            document.getElementsByClassName('container')[id].style.display = "block";
+        }
+       
+        function result() {
+            var score = 0;
+            if (document.getElementById('correct1').checked) {
+                score++;
+            }
+            if (document.getElementById('correct2').checked) {
+                score++;
+            }
+            if (document.getElementById('correct3').checked) {
+                score++;
+            }
+            alert("Ai raspuns corect la: "+ score+ scris);
+        }
+    </script>
+    
+</body>
+</html>
